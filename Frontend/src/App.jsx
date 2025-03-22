@@ -9,7 +9,10 @@ import StudentReports from './pages/StudentReports';
 import Scomplains from './pages/Scomplains';
 import { UserProvider } from "./components/userContext"; 
 import AdminHome from './pages/AdminHome';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 97396686aa32552f05488ed25f526f48d153d683
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
