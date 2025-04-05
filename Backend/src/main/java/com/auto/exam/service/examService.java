@@ -119,10 +119,18 @@ public class examService {
         System.out.println("Exam Duration: " + examDuration + " minutes");
     
         this.ExamId = examID;
+
+        // List<ProvideQuestion> questions = questionRepo.findQuestionById(
     
-        return questionRepo.findQuestionById(examID).stream()
-                .map(q -> new ProvideQuestion(q.getQuestionId(), q.getQuestion(), q.getMarks()))
-                .collect(Collectors.toList());
+        System.out.println("///////////////////////Question??????????????????????");
+        List<ProvideQuestion> questions = questionRepo.findQuestionById(examID).stream()
+        .peek(q -> System.out.println("Question Data: " + q.getAnswer()+ " " + q.getMarks() + " " + q.getQuestionType()+ " " + q.getQuestion()+ " " + q.getMcqOptionsList()))
+            .map(q -> new ProvideQuestion(q.getQuestionId(), q.getQuestion(), q.getMarks(), q.getMcqOptionsList()))
+            .collect(Collectors.toList());
+        System.out.println("///////////////////////Question??????????????????????");
+
+
+        return questions;
     }
 
     @Transactional

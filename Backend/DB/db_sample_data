@@ -561,198 +561,198 @@ VALUES
     (30, 'Answer30', 18, 'Question230',2, 30);
 
 
-INSERT INTO public.mcq_options (option_text, location, is_correct, question_id)
+INSERT INTO public.mcq_options (option_text, is_correct, question_id)
 VALUES
 -- Question 1
-('Option A', 1, false, 1),
-('Option B', 2, true, 1),
-('Option C', 3, false, 1),
-('Option D', 4, false, 1),
+('Option A', false, 1),
+('Option B', true, 1),
+('Option C', false, 1),
+('Option D', false, 1),
 
 -- Question 2
-('Option A', 1, false, 2),
-('Option B', 2, false, 2),
-('Option C', 3, true, 2),
-('Option D', 4, false, 2),
-('Option E', 5, false, 2),
+('Option A', false, 2),
+('Option B', false, 2),
+('Option C', true, 2),
+('Option D', false, 2),
+('Option E', false, 2),
 
 -- Question 3
-('Option A', 1, true, 3),
-('Option B', 2, false, 3),
-('Option C', 3, false, 3),
-('Option D', 4, false, 3),
+('Option A', true, 3),
+('Option B', false, 3),
+('Option C', false, 3),
+('Option D', false, 3),
 
 -- Question 4
-('Option A', 1, false, 4),
-('Option B', 2, false, 4),
-('Option C', 3, true, 4),
-('Option D', 4, false, 4),
+('Option A', false, 4),
+('Option B', false, 4),
+('Option C', true, 4),
+('Option D', false, 4),
 
 -- Question 5
-('Option A', 1, false, 5),
-('Option B', 2, false, 5),
-('Option C', 3, false, 5),
-('Option D', 4, true, 5),
-('Option E', 5, false, 5),
+('Option A', false, 5),
+('Option B', false, 5),
+('Option C', false, 5),
+('Option D', true, 5),
+('Option E', false, 5),
 
 -- Question 6
-('Option A', 1, false, 6),
-('Option B', 2, true, 6),
-('Option C', 3, false, 6),
-('Option D', 4, false, 6),
+('Option A', false, 6),
+('Option B', true, 6),
+('Option C', false, 6),
+('Option D', false, 6),
 
 -- Question 7
-('Option A', 1, false, 7),
-('Option B', 2, false, 7),
-('Option C', 3, true, 7),
-('Option D', 4, false, 7),
+('Option A', false, 7),
+('Option B', false, 7),
+('Option C', true, 7),
+('Option D', false, 7),
 
 -- Question 8
-('Option A', 1, false, 8),
-('Option B', 2, false, 8),
-('Option C', 3, false, 8),
-('Option D', 4, true, 8),
-('Option E', 5, false, 8),
+('Option A', false, 8),
+('Option B', false, 8),
+('Option C', false, 8),
+('Option D', true, 8),
+('Option E', false, 8),
 
 -- Question 9
-('Option A', 1, false, 9),
-('Option B', 2, true, 9),
-('Option C', 3, false, 9),
-('Option D', 4, false, 9),
+('Option A', false, 9),
+('Option B', true, 9),
+('Option C', false, 9),
+('Option D', false, 9),
 
 -- Question 10
-('Option A', 1, false, 10),
-('Option B', 2, false, 10),
-('Option C', 3, false, 10),
-('Option D', 4, true, 10),
-('Option E', 5, false, 10),
+('Option A', false, 10),
+('Option B', false, 10),
+('Option C', false, 10),
+('Option D', true, 10),
+('Option E', false, 10),
 
 -- Question 11
-('Option A', 1, false, 11),
-('Option B', 2, false, 11),
-('Option C', 3, true, 11),
-('Option D', 4, false, 11),
+('Option A', false, 11),
+('Option B', false, 11),
+('Option C', true, 11),
+('Option D', false, 11),
 
 -- Question 12
-('Option A', 1, false, 12),
-('Option B', 2, true, 12),
-('Option C', 3, false, 12),
-('Option D', 4, false, 12),
-('Option E', 5, false, 12),
+('Option A', false, 12),
+('Option B', true, 12),
+('Option C', false, 12),
+('Option D', false, 12),
+('Option E', false, 12),
 
 -- Question 13
-('Option A', 1, false, 13),
-('Option B', 2, false, 13),
-('Option C', 3, false, 13),
-('Option D', 4, true, 13),
+('Option A', false, 13),
+('Option B', false, 13),
+('Option C', false, 13),
+('Option D', true, 13),
 
 -- Question 14
-('Option A', 1, true, 14),
-('Option B', 2, false, 14),
-('Option C', 3, false, 14),
-('Option D', 4, false, 14),
+('Option A', true, 14),
+('Option B', false, 14),
+('Option C', false, 14),
+('Option D', false, 14),
 
 -- Question 15
-('Option A', 1, false, 15),
-('Option B', 2, false, 15),
-('Option C', 3, true, 15),
-('Option D', 4, false, 15),
-('Option E', 5, false, 15),
+('Option A', false, 15),
+('Option B', false, 15),
+('Option C', true, 15),
+('Option D', false, 15),
+('Option E', false, 15),
 
 -- Question 16
-('Option A', 1, false, 16),
-('Option B', 2, true, 16),
-('Option C', 3, false, 16),
-('Option D', 4, false, 16),
+('Option A', false, 16),
+('Option B', true, 16),
+('Option C', false, 16),
+('Option D', false, 16),
 
 -- Question 17
-('Option A', 1, false, 17),
-('Option B', 2, false, 17),
-('Option C', 3, true, 17),
-('Option D', 4, false, 17),
+('Option A', false, 17),
+('Option B', false, 17),
+('Option C', true, 17),
+('Option D', false, 17),
 
 -- Question 18
-('Option A', 1, false, 18),
-('Option B', 2, false, 18),
-('Option C', 3, false, 18),
-('Option D', 4, true, 18),
-('Option E', 5, false, 18),
+('Option A', false, 18),
+('Option B', false, 18),
+('Option C', false, 18),
+('Option D', true, 18),
+('Option E', false, 18),
 
 -- Question 19
-('Option A', 1, false, 19),
-('Option B', 2, false, 19),
-('Option C', 3, true, 19),
-('Option D', 4, false, 19),
+('Option A', false, 19),
+('Option B', false, 19),
+('Option C', true, 19),
+('Option D', false, 19),
 
 -- Question 20
-('Option A', 1, false, 20),
-('Option B', 2, false, 20),
-('Option C', 3, false, 20),
-('Option D', 4, true, 20),
-('Option E', 5, false, 20),
+('Option A', false, 20),
+('Option B', false, 20),
+('Option C', false, 20),
+('Option D', true, 20),
+('Option E', false, 20),
 
 -- Question 21
-('Option A', 1, false, 21),
-('Option B', 2, true, 21),
-('Option C', 3, false, 21),
-('Option D', 4, false, 21),
+('Option A', false, 21),
+('Option B', true, 21),
+('Option C', false, 21),
+('Option D', false, 21),
 
 -- Question 22
-('Option A', 1, false, 22),
-('Option B', 2, false, 22),
-('Option C', 3, true, 22),
-('Option D', 4, false, 22),
+('Option A', false, 22),
+('Option B', false, 22),
+('Option C', true, 22),
+('Option D', false, 22),
 
 -- Question 23
-('Option A', 1, true, 23),
-('Option B', 2, false, 23),
-('Option C', 3, false, 23),
-('Option D', 4, false, 23),
-('Option E', 5, false, 23),
+('Option A', true, 23),
+('Option B', false, 23),
+('Option C', false, 23),
+('Option D', false, 23),
+('Option E', false, 23),
 
 -- Question 24
-('Option A', 1, false, 24),
-('Option B', 2, false, 24),
-('Option C', 3, true, 24),
-('Option D', 4, false, 24),
+('Option A', false, 24),
+('Option B', false, 24),
+('Option C', true, 24),
+('Option D', false, 24),
 
 -- Question 25
-('Option A', 1, false, 25),
-('Option B', 2, true, 25),
-('Option C', 3, false, 25),
-('Option D', 4, false, 25),
+('Option A', false, 25),
+('Option B', true, 25),
+('Option C', false, 25),
+('Option D', false, 25),
 
 -- Question 26
-('Option A', 1, false, 26),
-('Option B', 2, false, 26),
-('Option C', 3, false, 26),
-('Option D', 4, true, 26),
-('Option E', 5, false, 26),
+('Option A', false, 26),
+('Option B', false, 26),
+('Option C', false, 26),
+('Option D', true, 26),
+('Option E', false, 26),
 
 -- Question 27
-('Option A', 1, true, 27),
-('Option B', 2, false, 27),
-('Option C', 3, false, 27),
-('Option D', 4, false, 27),
+('Option A', true, 27),
+('Option B', false, 27),
+('Option C', false, 27),
+('Option D', false, 27),
 
 -- Question 28
-('Option A', 1, false, 28),
-('Option B', 2, false, 28),
-('Option C', 3, true, 28),
-('Option D', 4, false, 28),
+('Option A', false, 28),
+('Option B', false, 28),
+('Option C', true, 28),
+('Option D', false, 28),
 
 -- Question 29
-('Option A', 1, false, 29),
-('Option B', 2, false, 29),
-('Option C', 3, true, 29),
-('Option D', 4, false, 29),
-('Option E', 5, false, 29),
+('Option A', false, 29),
+('Option B', false, 29),
+('Option C', true, 29),
+('Option D', false, 29),
+('Option E', false, 29),
 
 -- Question 30
-('Option A', 1, false, 30),
-('Option B', 2, true, 30),
-('Option C', 3, false, 30),
-('Option D', 4, false, 30);
+('Option A', false, 30),
+('Option B', true, 30),
+('Option C', false, 30),
+('Option D', false, 30);
 
 --attempt
 INSERT INTO public.attempt (attempt_id, grade, marks, exam_id, student_id)
