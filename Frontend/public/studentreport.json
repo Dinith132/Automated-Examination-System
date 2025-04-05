@@ -1,58 +1,72 @@
 [
-    {
-      "id": 1,
-      "name": "Math",
-      "lastAttempt": "2025-03-21",
-      "marksObtained": 85,
-      "totalMarks": 100,
-      "progress": 85,
-      "lastTimeMarks": 90
-    },
-    {
-      "id": 2,
-      "name": "Science",
-      "lastAttempt": "2025-03-18",
-      "marksObtained": 90,
-      "totalMarks": 100,
-      "progress": 90,
-      "lastTimeMarks": 87
-    },
-    {
-        "id": 3,
-        "name": "History",
-        "lastAttempt": "2025-03-12",
-        "marksObtained": 79,
-        "totalMarks": 100,
-        "progress": 79,
-        "lastTimeMarks": 67
-      },
-      {
-        "id": 4,
-        "name": "Civics",
-        "lastAttempt": "2025-03-11",
-        "marksObtained": 90,
-        "totalMarks": 100,
-        "progress": 90,
-        "lastTimeMarks": 95
-      },
-      {
-        "id": 5,
-        "name": "English",
-        "lastAttempt": "2025-03-18",
-        "marksObtained": 80,
-        "totalMarks": 100,
-        "progress": 80,
-        "lastTimeMarks": 76
-
-      },
-      {
-        "id": 6,
-        "name": "ICT",
-        "lastAttempt": "2025-03-18",
-        "marksObtained": 87,
-        "totalMarks": 100,
-        "progress": 87,
-        "lastTimeMarks": 69 
-      }
-  ]
-  
+  {
+    "attemptId": 1,
+    "examId": 21,
+    "startDateTime": "2025-06-21T09:00:00",
+    "totalMarks": 100,
+    "marks": 0,
+    "grade": "F",
+    "studentId": 21,
+    "courseName": "Artificial Intelligence"
+  },
+  {
+    "attemptId": 2,
+    "examId": 22,
+    "startDateTime": "2025-06-22T13:30:00",
+    "totalMarks": 100,
+    "marks": 78,
+    "grade": "C+",
+    "studentId": 34,
+    "courseName": "Data Structures"
+  },
+  {
+    "attemptId": 3,
+    "examId": 23,
+    "startDateTime": "2025-06-23T10:15:00",
+    "totalMarks": 100,
+    "marks": 92,
+    "grade": "A-",
+    "studentId": 15,
+    "courseName": "Database Systems"
+  },
+  {
+    "attemptId": 4,
+    "examId": 21,
+    "startDateTime": "2025-06-21T11:00:00",
+    "totalMarks": 100,
+    "marks": 65,
+    "grade": "D",
+    "studentId": 42,
+    "courseName": "Artificial Intelligence"
+  },
+  {
+    "attemptId": 5,
+    "examId": 24,
+    "startDateTime": "2025-06-24T14:00:00",
+    "totalMarks": 100,
+    "marks": 88,
+    "grade": "B+",
+    "studentId": 27,
+    "courseName": "Operating Systems"
+  },
+  {
+    "attemptId": 6,
+    "examId": 22,
+    "startDateTime": "2025-06-22T15:45:00",
+    "totalMarks": 100,
+    "marks": 54,
+    "grade": "F",
+    "studentId": 19,
+    "courseName": "Data Structures"
+  },
+  {
+    "attemptId": 7,
+    "examId": 23,
+    "startDateTime": "2025-06-23T09:00:00",
+    "totalMarks": 100,
+    "marks": 100,
+    "grade": "A+",
+    "studentId": 31,
+    "courseName": "Database Systems"
+  }
+]

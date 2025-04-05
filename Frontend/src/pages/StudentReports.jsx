@@ -1,15 +1,23 @@
-import React from 'react';
-import { useState, useEffect } from "react";
-import './StudentReports.css';
-import Navbar from '../components/Navbar';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import "./StudentReports.css";
+import Navbar from "../components/Navbar";
 
 const StudentReport = () => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate(); // React Router hook for navigation
 
-  // Fetch 
+  // Fetch report data
   useEffect(() => {
-    fetch("/studentreport.json")
+    const token = localStorage.getItem("token");
+    fetch("http://192.168.43.27:8080/student/reports", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         setReportData(data);
@@ -18,45 +26,43 @@ const StudentReport = () => {
       .catch((err) => console.error("Error fetching report data:", err));
   }, []);
 
-  // Download JSON file
-  const downloadReport = () => {
-    const dataStr = JSON.stringify(reportData, null, 2);
-    const blob = new Blob([dataStr], { type: "application/json" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "student_report.json";
-    link.click();
-  };
-
   return (
     <>
-    <Navbar/>
-    <div className="student-report-container">
-      {loading ? (
-        <p>Loading your report...</p>
-      ) : (
-        <><h2 className='stu-header'>Student Reports</h2>
-          <div className="report-content">
-            {reportData.length > 0 ? (
-              reportData.map((subject) => (
-                <div key={subject.id} className="subject-report">
-                  <h3>{subject.name}</h3>
-                  <p>Last Attempt: {subject.lastAttempt}</p>
-                  <p>Marks Obtained: {subject.marksObtained}/{subject.totalMarks}</p>
-                  <p>Overall Progress: {subject.progress}%</p>
-                  <p>Last time marks: {subject.lastTimeMarks}/{subject.totalMarks}</p>
-                  <button onClick={downloadReport} className="download-button">
-                    Download Report
-                  </button>
-                </div>
-              ))
-            ) : (
-              <p>No report data available.</p>
-            )}
-          </div>
-        </>
-      )}
-    </div>
+      <Navbar />
+      <div className="student-report-container">
+        {loading ? (
+          <p>Loading your report...</p>
+        ) : (
+          <>
+            <h2 className="stu-header">Student Reports</h2>
+            <div className="report-content">
+              {reportData.length > 0 ? (
+                reportData.map((report) => (
+                  <div key={report.attemptId} className="report-card">
+                    <h3>{report.courseName}</h3>
+                    <p>Exam ID: {report.examId}</p>
+                    <p>Start Date: {new Date(report.startDateTime).toLocaleString()}</p>
+                    <p>Marks Obtained: {report.marks}/{report.totalMarks}</p>
+                    <p>Grade: {report.grade}</p>
+                    <button
+                      onClick={() =>
+                        navigate(`/view-report/${report.examId}`, {
+                          state: { attemptId: report.attemptId },
+                        })
+                      }
+                      className="view-report-button"
+                    >
+                      View Report
+                    </button>
+                  </div>
+                ))
+              ) : (
+                <p>No report data available.</p>
+              )}
+            </div>
+          </>
+        )}
+      </div>
     </>
   );
 };

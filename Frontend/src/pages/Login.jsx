@@ -19,7 +19,7 @@ const Login = () => {
     }
 
     try {
-      const response = await fetch("http://192.168.68.73:8080/login", {
+      const response = await fetch("http://192.168.43.27:8080/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,95 +1,140 @@
+/* General Styling */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Main container for the quiz page */
 .student-quiz-container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  font-family: 'Inter', sans-serif;
-  grid-template-columns: repeat(2, 1fr); 
   gap: 20px;
-} 
+}
 
+/* Styling for the quiz list */
 .quiz-list {
-  display: grid ;
-  grid-template-columns: repeat(2,1fr);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  width: 70%;
+  width: 100%;
   max-width: 1200px;
 }
 
-
-
+/* Styling for individual quiz cards */
 .quiz-card {
-  background: #f4f4f4;
+  background: #ffffff;
   padding: 20px;
-  border-radius: 30px;
-  box-shadow: 5px 5px 10px rgb(61, 49, 49);
-  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .quiz-card h3 {
-  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
   color: #1a2e45;
+  margin-bottom: 10px;
 }
 
 .quiz-card p {
-  margin-bottom: 8px;
-  color: #444;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
 }
 
 .quiz-card button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
+  padding: 10px 15px;
+  background-color: #4caf50;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
-}
-
-.quiz-card:hover{
-  transform: scale(1.02);
-  transition: 0.3s;
+  font-size: 14px;
+  width: 100%;
 }
 
 .quiz-card button:hover {
   background-color: #45a049;
 }
 
+/* Styling for the quiz container */
 .quiz-container {
-  flex: 1;
-  max-width: 40%;
-  text-align: left;
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
+.quiz-container h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1a2e45;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Styling for individual questions */
 .question {
-  background: #cecece;
-  padding: 20px;
+  background: #f4f4f4;
+  padding: 15px;
   border-radius: 10px;
   margin-bottom: 20px;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
-  width: 1000px;
-  height: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .question p {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
   font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
 }
 
+/* Styling for options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.option:hover {
+  background: #f9f9f9;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Styling for buttons */
 button {
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #0073e6;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-top: 20px;
+  font-size: 14px;
 }
 
 button:hover {
@@ -101,38 +146,13 @@ button:disabled {
   cursor: not-allowed;
 }
 
-.quiz-container .question {
-  background: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.quiz-container .question p {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.quiz-container .question label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 16px;
-}
-
-.quiz-container .question input {
-  margin-right: 10px;
-}
-
-.quiz-container .question input[type="radio"] {
-  margin-bottom: 10px;
-}
-
+/* Styling for the submit button */
 .quiz-container button {
   background-color: #ff5733;
   padding: 10px 20px;
   margin-top: 20px;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .quiz-container button:hover {
@@ -142,16 +162,23 @@ button:disabled {
 /* Responsive styling */
 @media (max-width: 768px) {
   .student-quiz-container {
-    flex-direction: column;
-    align-items: center;
+    padding: 10px;
   }
 
-  .quiz-list,
-  .quiz-container {
-    max-width: 100%;
+  .quiz-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 
   .quiz-card {
     width: 100%;
+  }
+
+  .quiz-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .question {
+    padding: 10px;
   }
 }

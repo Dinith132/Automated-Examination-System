@@ -1,0 +1,92 @@
+[
+  {
+    "examId": 21,
+    "questionId": 21,
+    "question": "Explain the difference between supervised and unsupervised learning.",
+    "marks": 10,
+    "answer": "Supervised learning uses labeled data; unsupervised finds patterns in unlabeled data.",
+    "studentAnswer": "Supervised uses labels, unsupervised finds clusters.",
+    "studentId": 21
+  },
+  {
+    "examId": 21,
+    "questionId": 22,
+    "question": "What is overfitting and how can you prevent it?",
+    "marks": 10,
+    "answer": "Overfitting is when a model learns noise; prevent with regularization, cross‑validation, pruning.",
+    "studentAnswer": "Overfitting is memorizing noise; use dropout and more data.",
+    "studentId": 21
+  },
+  {
+    "examId": 21,
+    "questionId": 23,
+    "question": "Define precision and recall.",
+    "marks": 10,
+    "answer": "Precision = TP/(TP+FP); Recall = TP/(TP+FN).",
+    "studentAnswer": "Precision is correct positives over all predicted positives; recall is correct positives over actual positives.",
+    "studentId": 21
+  },
+  {
+    "examId": 21,
+    "questionId": 24,
+    "question": "What’s the purpose of a confusion matrix?",
+    "marks": 10,
+    "answer": "To visualize classifier performance across true/false positives and negatives.",
+    "studentAnswer": "It shows TP, FP, TN, FN counts for evaluation.",
+    "studentId": 21
+  },
+  {
+    "examId": 21,
+    "questionId": 25,
+    "question": "Explain gradient descent in one sentence.",
+    "marks": 10,
+    "answer": "An optimization algorithm that iteratively updates parameters to minimize a loss function.",
+    "studentAnswer": "It tweaks weights step by step to lower error.",
+    "studentId": 21
+  },
+  {
+    "examId": 21,
+    "questionId": 26,
+    "question": "What is a learning rate?",
+    "marks": 10,
+    "answer": "A hyperparameter that controls the step size during optimization.",
+    "studentAnswer": "It’s how big each gradient step is.",
+    "studentId": 21
+  },
+  {
+    "examId": 21,
+    "questionId": 27,
+    "question": "Name one advantage of decision trees.",
+    "marks": 10,
+    "answer": "They’re easy to interpret and visualize.",
+    "studentAnswer": "You can see the decision path clearly.",
+    "studentId": 21
+  },
+  {
+    "examId": 21,
+    "questionId": 28,
+    "question": "What does ‘bias’ mean in ML?",
+    "marks": 10,
+    "answer": "Error from erroneous assumptions in the learning algorithm.",
+    "studentAnswer": "It’s the model’s tendency to miss true relationships.",
+    "studentId": 21
+  },
+  {
+    "examId": 21,
+    "questionId": 29,
+    "question": "Why use cross-validation?",
+    "marks": 10,
+    "answer": "To reliably estimate model performance on unseen data.",
+    "studentAnswer": "To check how the model generalizes.",
+    "studentId": 21
+  },
+  {
+    "examId": 21,
+    "questionId": 30,
+    "question": "Describe a support vector machine.",
+    "marks": 10,
+    "answer": "A classifier that finds the hyperplane maximizing margin between classes.",
+    "studentAnswer": "It draws the best separating line with widest gap.",
+    "studentId": 21
+  }
+]

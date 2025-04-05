@@ -11,7 +11,7 @@ const StudentHomePage = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
   
-    fetch("http://10.102.16.157:8080/student/getAllExam", {
+    fetch("http://192.168.43.27:8080/student/getAllExam", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,

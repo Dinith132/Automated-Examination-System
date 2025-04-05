@@ -1,226 +1,258 @@
-.student-homepage {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .calendar-section {
-    flex: 1; 
-    max-width: 55%;
-    text-align: center;
-    align-items: center;
-  } 
-  
-  .react-calendar {
-    margin-left: 210px;
-    width: 600px; 
-    height: 550px; 
-    background: #1C1C1C;
-    border-radius: 10px;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  
-  .calendar-legend{
-    margin-left: 210px;
-    width: 600px; 
-    background: #1C1C1C;
-    border-radius: 10px;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    color: white;
-    border: none;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .legend-color {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%; /* Makes it a circle */
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .legend-color.quiz{
-    background-color:#f1cb0c ;
-  }
-  .legend-color.assignment{
-    background-color:#0073e6 ;
-  }
-  .legend-color.exam{
-    background-color:#DC3545 ;
-  }
-  .legend-color.today{
-    background-color:#44e35c ;
-  }
-  
-  
-   /* Change navigation button colors */
-  .react-calendar__navigation button {
-    color: rgb(38, 31, 31);
-    background: #D3D3D3;
-    border: none;
-    font-size: 18px;
-    padding: 10px;
-    height: 55px;
-    border-radius: 5px;
-    margin: 5px;
-  }
-  
-  .react-calendar__navigation button:hover {
-    background: #1A2E45;
-  }
-  
-  /*days*/
-  .react-calendar__tile {
-    padding: 10px;
-    font-size: 18px;
-    text-align: center;
-    height: 60px;
-    width: 60px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .react-calendar__tile:hover {
-    background-color: #f3f3f3;
-  }
-  
-  .react-calendar__tile--now {
-    background: #44e35c !important;
-    color: white !important;
-    font-weight: bold;
-    border-radius: 5px;
-    border-radius: 50%;
-  }
-  
-  .react-calendar__tile.highlight-exam {
-    background-color: #DC3545 !important;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .react-calendar__tile.highlight-quiz {
-    background-color: #f1cb0c !important;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .react-calendar__tile.highlight-assignment {
-    background-color: #0073e6 !important;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .react-calendar__month-view__weekdays {
-    color: white !important;  
-    font-weight: bold;
-    background-color: #1c1c1c; 
-    padding: 10px 0; 
-    border-radius: 5px;
-  }
-  
-  
-  .tasks-section {
-    flex: 1; 
-    max-width: 40%;
-    text-align: left;
-  }
-  
-  .task-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .task-card {
-    background: #f4f4f4;
+/* General Styling */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Styling for the main container */
+.student-quiz-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling for available exams */
+.student-quiz-container .ava-qz {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1A2E45;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for quiz cards */
+.quiz-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.quiz-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.quiz-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.quiz-card button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.quiz-card button:hover {
+  background-color: #45a049;
+  align-items: center;
+}
+
+/* Styling for the quiz container */
+.quiz-container {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  align-items: center;
+}
+
+.quiz-container h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1A2E45;
+  margin-bottom: 20px;
+  text-align: center;
+  align-items: center; /* Center the title */
+
+}
+
+/* Styling for the question container */
+.question {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.question p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Styling for the options container */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add spacing between options */
+  margin-top: 10px;
+  gap: 15px; /* Add spacing between options */
+  margin-top: 10px;
+}
+
+/* Styling for individual options */
+.option {
+  display: flex;
+  align-items: center;
+  font-size: 16px; /* Slightly larger font for readability */
+  color: #555;
+  cursor: pointer;
+  padding: 12px; /* Add padding for better click area */
+  background: #f9f9f9; /* Light background for options */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 5px 0; /* Add spacing between options */
+  /* Add a hover effect for better interactivity */
+  border: 1px solid #ddd; /* Add a border for better separation */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.option input[type="radio"] {
+  margin-right: 10px; /* Add spacing between the radio button and text */
+}
+
+.option:hover {
+  background-color: #e6f7ff; /* Light blue background on hover */
+  color: #0073e6; /* Blue text color on hover */
+  border-color: #0073e6; /* Change border color on hover */
+}
+
+.option input[type="radio"]:checked + label {
+  font-weight: bold; /* Highlight selected option */
+  color: #0073e6; /* Change text color for selected option */
+}
+
+/* Enhanced text styling for options */
+.option label {
+  font-size: 16px;
+  font-weight: 400; /* Normal weight for options */
+  line-height: 1.5; /* Improved line spacing */
+  color: #555; /* Darker color for better contrast */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  font-weight: 500; /* Medium weight for better readability */
+  line-height: 1.5; /* Improved line spacing */
+  color: #333; /* Darker color for better contrast */
+}
+
+/* Styling for the submit button */
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.quiz-container button {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 20px;
+  width: 100%;  
+/* Full width for the button */
+align-items: center; /* Center the button text */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center the button text horizontally */
+  text-align: center; /* Center the button text */
+  font-weight: bold; /* Bold text for emphasis */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.quiz-container button:hover {
+  background-color: #005bb5;
+}
+
+/* Styling for the quiz results */
+.quiz-results {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.result {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.result:last-child {
+  border-bottom: none;
+}
+
+.result p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Styling for the total marks */
+.quiz-results h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1A2E45;
+  margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .student-quiz-container {
     padding: 15px;
-    border-radius: 30px;
-    box-shadow: 5px 5px 10px rgb(61, 49, 49);
-    height: 110px;
-    margin-right: 100px  ;
-    position: relative;
   }
-  
-  .enroll {
-    position: absolute; 
-    bottom: 10px;
-    right: 10px;  
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width:100px;
-    margin-right: 10px;
-    margin-bottom: 20px;
+
+  .student-quiz-container .ava-qz {
+    font-size: 20px;
   }
-  
-  .enroll:hover {
-    background-color: #45a049; /* Slightly darker green on hover */
+
+  .quiz-container {
+    padding: 15px;
   }
-  
-  
-  .task-card-quiz{
-    background: #ffcc00;
-    border-radius: 30px;
-    width: 200px;
-    margin-left: 5px;
-    padding: 5px;
+
+  .quiz-card {
+    width: 100%;
   }
-  .task-card-assignment{
-    background: #0073e6;
-    border-radius: 30px;
-    width: 200px;
-    margin-left: 5px;
-    padding: 5px;
+
+  .option {
+    padding: 10px;
   }
-  .task-card-exam{
-    background: #ff5733;
-    border-radius: 30px;
-    width: 200px;
-    margin-left: 5px;
-    padding: 5px;
-  }
-  
-  .task-card p {
-    margin-bottom: 5px; 
-  }
-  
-  .task-card:hover{
-    transform: scale(1.06);
-    box-shadow: 2px 2px 10px rgb(61, 49, 49);
-    transition: 0.3s;
-  }
-  .ongoing-tasks-title,.event-cal{
-    color: #1A2E45;
-    font-weight: bold;
-    margin-left: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .react-calendar .highlight-quiz {
-    background-color: #ffcc00 !important;
-    border-radius: 50%;
-    color: white;
-  }
-  
-  .react-calendar .highlight-exam {
-    background-color: #ff5733 !important;
-    border-radius: 50%;
-    color: white;
-  }
-  
-  .react-calendar .highlight-assignment {
-    background-color: #0073e6 !important;
-    border-radius: 50%;
-    color: white;
-  }
-  
+}
