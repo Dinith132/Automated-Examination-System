@@ -10,7 +10,7 @@ const Login = () => {
   const navigate = useNavigate();
   const { setUser } = useContext(UserContext);
 
-  const BASE_URL = "http://10.102.16.157:8080";
+  const BASE_URL = "http://192.168.68.73:8080";
 
   const handleLogin = async (e) => {
     e.preventDefault();

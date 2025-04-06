@@ -20,7 +20,7 @@ const Department = () => {
       };
 
       // Fetch lecturers
-      fetch("http://10.102.16.157:8080/admin/getLecturersByDeptSem", {
+      fetch("http://192.168.68.73:8080/admin/getLecturersByDeptSem", {
         method: "POST",
         headers,
         body,
@@ -33,7 +33,7 @@ const Department = () => {
         .catch((err) => console.error("Error fetching lecturers:", err));
 
       // Fetch students
-      fetch("http://10.102.16.157:8080/admin/getStudentsByDeptSem", {
+      fetch("http://192.168.68.73:8080/admin/getStudentsByDeptSem", {
         method: "POST",
         headers,
         body,
