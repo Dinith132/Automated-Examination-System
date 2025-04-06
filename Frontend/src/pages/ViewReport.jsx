@@ -22,7 +22,7 @@ const ViewReport = () => {
     const token = localStorage.getItem("token");
     console.log("Fetching report for", { examId, attemptId });
 
-    fetch(`http://192.168.43.27:8080/student/reports/${examId}`, {
+    fetch(`http://192.168.147.57:8080/student/reports/${examId}`, {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,

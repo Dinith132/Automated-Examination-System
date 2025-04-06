@@ -13,7 +13,7 @@ const StudentExams = () => {
   // Fetch quizzes from backend
   useEffect(() => {
     const token = localStorage.getItem("token"); // Retrieve token
-    fetch("http://192.168.43.27:8080/student/exam/quiz", {
+    fetch("http://192.168.147.57:8080/student/exam/quiz", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,
@@ -41,7 +41,7 @@ const StudentExams = () => {
   const startQuiz = (quiz) => {
     const token = localStorage.getItem("token"); // Retrieve token
 
-    fetch(`http://192.168.43.27:8080/student/exam/${quiz.id}`, {
+    fetch(`http://192.168.147.57:8080/student/exam/${quiz.id}`, {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,
@@ -104,7 +104,7 @@ const StudentExams = () => {
       };
     });
 
-    fetch(`http://192.168.43.27:8080/student/exam/${currentQuiz.id}/submit`, {
+    fetch(`http://192.168.147.57:8080/student/exam/${currentQuiz.id}/submit`, {
       method: "POST",
       body: JSON.stringify(formattedAnswers), // Send the formatted answers
       headers: {

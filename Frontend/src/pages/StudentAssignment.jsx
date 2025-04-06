@@ -13,7 +13,7 @@ const StudentExams = () => {
   // Fetch quizzes from backend
   useEffect(() => {
     const token = localStorage.getItem("token"); // Retrieve token
-    fetch("http://192.168.43.27:8080/student/exam/assignments", {
+    fetch("assignment.json", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,
